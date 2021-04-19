@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+
+body {
+  background-color: #9dbeb9;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+svg {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  z-index: -999;
+}
+
+#logo {
+  color: white;
+  text-align: center;
+  position: absolute;
+  margin: 0;
+  top: 0px;
+  left: 40px;
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 30px;
+}
+
+#logo span {
+  color: #194350;
+  font-size: 1.6rem;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wrapper h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #194350;
+  font-size: 3rem;
+}
+
+#wrapper input {
+  border-radius: 50px;
+  height: 20px;
+  width: 600px;
+  font-size: 1.2rem;
+  color: gray;
+  padding: 20px;
+  border: none;
+  box-shadow: inset 2px 5px 20px gray;
+}
+
+#cajonBotones {
+  margin: 50px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #ff8882;
+  color: #194350;
+  padding: 15px 40px;
+  margin: auto 15px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  box-shadow: 0px 15px 20px -10px #7b3f3c, inset 3px 2px 5px #ffd2d0;
+}
+
+#clear {
+  background-color: #c9160d;
+  color: white;
+  box-shadow: 0px 15px 20px -10px #7b3f3c, inset 3px 2px 5px #f7b5b3;
+}
+
+#clear:hover {
+  background-color: #8d1c16;
+}
+
+button:hover {
+  background-color: #7b3f3c;
+  color: white;
+}
+
+button:active,
+#clear:active {
+  background-color: #7b3f3c;
+  box-shadow: 0px 5px 10px -10px #7b3f3c, inset 1px 0px 5px #ffd2d0;
+  text-shadow: -2px -2px white;
+  color: transparent;
+}
+
+/******************************
+*******************************
+************Emoji**************
+*******************************
+*******************************/
+
+#cajonEmoji {
+  display: flex;
+}
+
+.head {
+  height: 300px;
+  z-index: 999;
+  width: 300px;
+  background: #fbd671;
+  border: 15px solid #20184e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8) rotate(18deg);
+  transition: all 0.4s ease;
+}
+.head__2 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: #fbd671;
+  border-radius: 50%;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8) rotate(18deg);
+  transition: all 0.4s ease;
+}
+
+.face {
+  width: 65%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 1s ease;
+}
+.face__eyes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.face__eyes--left,
+.face__eyes--right {
+  width: 25px;
+  height: 40px;
+  background-color: #20184e;
+  border-radius: 50%;
+  border: 1vmin solid #20184e;
+  position: relative;
+  animation-name: blink;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.face__eyes--left::after,
+.face__eyes--right::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 5%;
+  background-color: #fbd671;
+  border-radius: 50%;
+}
+.face__mouth {
+  bottom: 0;
+  width: 80%;
+  height: 45%;
+  background-color: #20184e;
+  border: 5px solid #20184e;
+  border-radius: 5px 5px 50% 50%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.face__tongue {
+  position: absolute;
+  width: 75%;
+  height: 70%;
+  left: 20%;
+  top: 60%;
+  background-color: #f15962;
+  border-radius: 50% 50% 0 0;
+  transition: all 0.1s ease;
+}
+
+footer {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+footer span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+footer img {
+  height: 30px;
+  position: relative;
+  top: 10px;
+}
+
+/******************************
+*******************************
+****Animation & Transitions****
+*******************************
+*******************************/
+
+@keyframes blink {
+  0% {
+    height: 40px;
+  }
+  2% {
+    height: 0px;
+  }
+  4% {
+    height: 40px;
+  }
+  60% {
+    height: 40px;
+  }
+  62% {
+    height: 0px;
+  }
+  64% {
+    height: 40px;
+  }
+  66% {
+    height: 40px;
+  }
+  68% {
+    height: 0px;
+  }
+  70% {
+    height: 40px;
+  }
+}
+
+/******************************
+*************Clear*************
+******************************/
+
+.clearButtonFace {
+  opacity: 0;
+}
+
+.clearButtonMouth {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.clearButtonHead {
+  transform: scale(0.8) rotate(0deg);
+}
+
+/******************************
+*************Shrink************
+******************************/
+
+.shrinkButtonFace {
+  opacity: 0;
+}
+
+.shrinkButtonMouth {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.shrinkButtonHead {
+  transform: scale(0.3) rotate(360deg);
+}
+
+/******************************
+**********Shrink fail**********
+******************************/
+
+.shrinkFailMouth {
+  height: 45%;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 50% 50% 5px 5px;
+  background-color: unset;
+}
+
+.shrinkFailTongue {
+  display: none;
+}
+
+/******************************
+**********Copy Button**********
+******************************/
+
+.copyButton {
+  transform: scale(0.8) rotate(18deg) translateX(170px);
+}
+
+.copyButton__2 {
+  opacity: 1;
+  transform: scale(0.8) rotate(-18deg) translateX(-170px);
+}
+
+@media screen and (max-width: 900px) {
+  .head {
+    transform: scale(0.6) rotate(18deg);
+  }
+  .head__2 {
+    transform: scale(0.6) rotate(18deg);
+  }
+  #logo {
+    color: white;
+    text-align: left;
+    margin: 20px;
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  #logo p {
+    margin: 0;
+  }
+  #cajonBotones {
+    margin: 50px 0px 0 0px;
+    display: inline-block;
+    text-align: center;
+  }
+  footer {
+    color: white;
+    text-align: center;
+    position: unset;
+    padding: 10px;
+    background-color: #194350;
+  }
+  footer p {
+    margin: 0;
+  }
+  button {
+    background-color: #ff8882;
+    color: #194350;
+    padding: 15px 40px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0px 15px 20px -10px #7b3f3c, inset 3px 2px 5px #ffd2d0;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.8);
+    margin-top: 50px;
+  }
+  #wrapper input {
+    border-radius: 50px;
+    height: 20px;
+    width: 80%;
+    font-size: 1.2rem;
+    color: gray;
+    padding: 20px;
+    border: none;
+    box-shadow: inset 2px 5px 20px gray;
+  }
+  svg {
+    display: none;
+  }
+  body {
+    background-color: #9dbeb9;
+    width: 100vw;
+    height: unset;
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    font-family: "Poppins", sans-serif;
+  }
+  /******************************
+*************Clear*************
+******************************/
+
+  .clearButtonFace {
+    opacity: 0;
+  }
+
+  .clearButtonMouth {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .clearButtonHead {
+    transform: scale(0.6) rotate(0deg);
+  }
+  /******************************
+*************Shrink************
+******************************/
+
+  .shrinkButtonFace {
+    opacity: 0;
+  }
+
+  .shrinkButtonMouth {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .shrinkButtonHead {
+    transform: scale(0.2) rotate(360deg);
+  }
+
+  /******************************
+**********Shrink fail**********
+******************************/
+
+  .shrinkFailMouth {
+    height: 45%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 50% 50% 5px 5px;
+    background-color: unset;
+  }
+
+  .shrinkFailTongue {
+    display: none;
+  }
+  /******************************
+**********Copy Button**********
+******************************/
+
+  .copyButton {
+    transform: scale(0.6) rotate(18deg) translateX(140px);
+  }
+
+  .copyButton__2 {
+    opacity: 1;
+    transform: scale(0.6) rotate(-18deg) translateX(-140px);
+  }
+}

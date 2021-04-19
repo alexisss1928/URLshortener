@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 1366 768"
+      style="enable-background: new 0 0 1366 768"
+      xml:space="preserve"
+    >
+      <style type="text/css">
+        .st0 {
+          fill: #194350;
+          stroke: #000000;
+          stroke-miterlimit: 10;
+        }
+      </style>
+      <path
+        class="st0"
+        d="M1366,0c0,0-297.5,31.5-506.5,401.5s-678,276-678,276S42.5,656.54,0,702.52C2,718.48,0,768,0,768h1366V0z"
+      />
+    </svg>
+    <div id="logo">
+      <p>Url<br /><span>shrink</span></p>
+    </div>
+
+    <div id="wrapper">
+      <h1>URL Shrink-Inator</h1>
+      <input
+        type="text"
+        id="longUrl"
+        value="https://github.com/zenorocha/clipboard.js.git"
+        placeholder="Copia tu URL aqui"
+      />
+      <div id="cajonBotones">
+        <button type="submit" value="enviar" id="submitButton">Shrink</button>
+        <button id="copy" data-clipboard-target="#longUrl">Copy URL</button>
+        <button id="clear">Clear</button>
+      </div>
+      <div id="cajonEmoji">
+        <div class="head" role="img">
+          <div class="face">
+            <div class="face__eyes">
+              <div class="face__eyes--left"></div>
+              <div class="face__eyes--right"></div>
+            </div>
+            <div class="face__mouth">
+              <div class="face__tongue"></div>
+            </div>
+          </div>
+        </div>
+        <div class="head__2" role="img">
+          <div class="face">
+            <div class="face__eyes">
+              <div class="face__eyes--left"></div>
+              <div class="face__eyes--right"></div>
+            </div>
+            <div class="face__mouth">
+              <div class="face__tongue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Made by <span>Alexis Salcedo</span> & Powered by
+        <a href="https://bitly.com/"
+          ><img src="./Assets/Bit.ly_Logo.png" alt=""
+        /></a>
+      </p>
+    </footer>
+    <script src="./clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
