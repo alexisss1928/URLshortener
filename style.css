@@ -217,6 +217,69 @@ footer img {
 
 /******************************
 *******************************
+*********Media queries*********
+*******************************
+******************************/
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: #9dbeb9;
+    height: unset;
+    display: block;
+    overflow: auto;
+  }
+  .head {
+    transform: scale(0.6) rotate(18deg);
+  }
+  .head__2 {
+    transform: scale(0.6) rotate(18deg);
+  }
+  #logo {
+    margin: 30px 0;
+  }
+  #logo p {
+    margin: 0;
+  }
+  #cajonBotones {
+    margin: 50px 0px 0 0px;
+    display: inline-block;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    position: unset;
+    padding: 10px;
+    background-color: #194350;
+  }
+  footer p {
+    margin: 0;
+  }
+  button {
+    background-color: #ff8882;
+    color: #194350;
+    padding: 15px 40px;
+    margin: auto 15px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: 0px 15px 20px -10px #7b3f3c, inset 3px 2px 5px #ffd2d0;
+  }
+  button {
+    margin: 15px;
+  }
+  #wrapper {
+    transform: scale(0.8);
+    margin-top: 50px;
+  }
+  #wrapper input {
+    width: 80%;
+  }
+}
+
+/******************************
+*******************************
 ****Animation & Transitions****
 *******************************
 *******************************/
@@ -266,9 +329,8 @@ footer img {
 }
 
 .clearButtonHead {
-  transform: scale(0.8) rotate(0deg);
+  transform: scale(0.6) rotate(0deg);
 }
-
 /******************************
 *************Shrink************
 ******************************/
@@ -284,7 +346,7 @@ footer img {
 }
 
 .shrinkButtonHead {
-  transform: scale(0.3) rotate(360deg);
+  transform: scale(0.2) rotate(360deg);
 }
 
 /******************************
@@ -303,160 +365,15 @@ footer img {
 .shrinkFailTongue {
   display: none;
 }
-
 /******************************
 **********Copy Button**********
 ******************************/
 
 .copyButton {
-  transform: scale(0.8) rotate(18deg) translateX(170px);
+  transform: scale(0.6) rotate(18deg) translateX(140px);
 }
 
 .copyButton__2 {
   opacity: 1;
-  transform: scale(0.8) rotate(-18deg) translateX(-170px);
-}
-
-@media screen and (max-width: 900px) {
-  .head {
-    transform: scale(0.6) rotate(18deg);
-  }
-  .head__2 {
-    transform: scale(0.6) rotate(18deg);
-  }
-  #logo {
-    color: white;
-    text-align: center;
-    margin: 20px;
-    font-weight: 800;
-    font-size: 4rem;
-    line-height: 30px;
-    margin: 30px 0;
-  }
-  #logo p {
-    margin: 0;
-  }
-  #cajonBotones {
-    margin: 50px 0px 0 0px;
-    display: inline-block;
-    text-align: center;
-  }
-  footer {
-    color: white;
-    text-align: center;
-    position: unset;
-    padding: 10px;
-    background-color: #194350;
-  }
-  footer p {
-    margin: 0;
-  }
-  button {
-    background-color: #ff8882;
-    color: #194350;
-    padding: 15px 40px;
-    margin: 15px;
-    border-radius: 10px;
-    border: none;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    box-shadow: 0px 15px 20px -10px #7b3f3c, inset 3px 2px 5px #ffd2d0;
-  }
-  #wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(0.8);
-    margin-top: 50px;
-  }
-  #wrapper input {
-    border-radius: 50px;
-    height: 20px;
-    width: 80%;
-    font-size: 1.2rem;
-    color: gray;
-    padding: 20px;
-    border: none;
-    box-shadow: inset 2px 5px 20px gray;
-  }
-  svg {
-    display: none;
-  }
-  body {
-    background-color: #9dbeb9;
-    width: 100vw;
-    height: unset;
-    margin: 0;
-    padding: 0;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    font-family: "Poppins", sans-serif;
-  }
-  /******************************
-*************Clear*************
-******************************/
-
-  .clearButtonFace {
-    opacity: 0;
-  }
-
-  .clearButtonMouth {
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-  }
-
-  .clearButtonHead {
-    transform: scale(0.6) rotate(0deg);
-  }
-  /******************************
-*************Shrink************
-******************************/
-
-  .shrinkButtonFace {
-    opacity: 0;
-  }
-
-  .shrinkButtonMouth {
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-  }
-
-  .shrinkButtonHead {
-    transform: scale(0.2) rotate(360deg);
-  }
-
-  /******************************
-**********Shrink fail**********
-******************************/
-
-  .shrinkFailMouth {
-    height: 45%;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 50% 50% 5px 5px;
-    background-color: unset;
-  }
-
-  .shrinkFailTongue {
-    display: none;
-  }
-  /******************************
-**********Copy Button**********
-******************************/
-
-  .copyButton {
-    transform: scale(0.6) rotate(18deg) translateX(140px);
-  }
-
-  .copyButton__2 {
-    opacity: 1;
-    transform: scale(0.6) rotate(-18deg) translateX(-140px);
-  }
+  transform: scale(0.6) rotate(-18deg) translateX(-140px);
 }

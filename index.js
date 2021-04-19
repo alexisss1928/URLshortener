@@ -34,7 +34,7 @@ if (regex.test(longUrl)) {
     console.log(error);
   }
 } else {
-  document.querySelector('#longUrl').value = 'Al parecer la direccion esta mal escrita'
+  document.querySelector('#longUrl').value = 'Apparently the URL is misspelled'
   shrinkFail()
 }
 }
