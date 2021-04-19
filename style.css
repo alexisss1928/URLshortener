@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
 
 body {
-  background: #9dbeb9 url("./Assets/BG.svg") no-repeat center;
+  background: #9dbeb9 url("./Assets/BG.svg") no-repeat 60%;
   background-size: cover;
   width: 100vw;
   height: 100vh;
