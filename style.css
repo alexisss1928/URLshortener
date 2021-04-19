@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
 
 body {
-  background-color: #9dbeb9;
+  background: #9dbeb9 url("./Assets/BG.svg") no-repeat center;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -12,13 +13,6 @@ body {
   align-items: center;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
-}
-
-svg {
-  position: absolute;
-  height: 100vh;
-  right: 0;
-  z-index: -999;
 }
 
 #logo {
@@ -120,7 +114,7 @@ button:active,
   z-index: 999;
   width: 300px;
   background: #fbd671;
-  border: 15px solid #20184e;
+  border: 15px solid #2b2b2b;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -133,7 +127,7 @@ button:active,
   height: 300px;
   width: 300px;
   background: #fbd671;
-  border: 15px solid #20184e;
+  border: 15px solid #2b2b2b;
   border-radius: 50%;
   display: flex;
   opacity: 0;
@@ -161,9 +155,9 @@ button:active,
 .face__eyes--right {
   width: 25px;
   height: 40px;
-  background-color: #20184e;
+  background-color: #2b2b2b;
   border-radius: 50%;
-  border: 1vmin solid #20184e;
+  border: 1vmin solid #2b2b2b;
   position: relative;
   animation-name: blink;
   animation-duration: 6s;
@@ -184,8 +178,8 @@ button:active,
   bottom: 0;
   width: 80%;
   height: 45%;
-  background-color: #20184e;
-  border: 5px solid #20184e;
+  background-color: #2b2b2b;
+  border: 5px solid #2b2b2b;
   border-radius: 5px 5px 50% 50%;
   overflow: hidden;
   position: relative;
